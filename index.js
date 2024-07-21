@@ -5,9 +5,9 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const { router } = require('./router/router')
-const { PORT, HOST, BBDD } = require('./env')
+const { PORT, MONGO } = require('./env')
 
-const conectar = async ()=> mongoose.connect(`mongodb://${HOST}/${BBDD}`)
+const conectar = async ()=> mongoose.connect(`mongodb://${MONGO}`)
         .then(()=> console.log('Conectando a Mongoose'))
         .catch(err => console.log(err.message))
 

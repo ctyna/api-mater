@@ -1,6 +1,5 @@
 module.exports = {
     PORT : process.env.PORT || 3000,
-    HOST : process.env.HOST || '127.0.0.1',
-    BBDD : process.env.BBDD || 'mater'
+    MONGO : process.env.MONGO || '127.0.0.1:27017/mater'
 }
 
